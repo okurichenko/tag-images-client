@@ -1,0 +1,5 @@
+BrightTag.site('kbMzxFN',function(s){
+s.domready(function(){
+s.tag('\x3cscript\nsrc\x3d\x22https://d3v27wwd40f0xu.cloudfront.net/js/tracking/sidecar_crateandbarrel.js\x22 type\x3d\x22text/javascript\x22\x3e\n\x3c/script\x3e',{tagId:4893543});
+});
+});

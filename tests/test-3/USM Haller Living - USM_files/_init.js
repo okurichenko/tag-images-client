@@ -1,0 +1,2 @@
+define(['jquery','./USM'],function($,USM){'use strict';USM._initModules=function($context){var modules=USM.modules,load=[],length=modules.length;for(var i=length;i--;){var me=modules[i];if($(me[1],$context).length){load.push(me[0],$context);}}
+if(load.length){require(load);}};});

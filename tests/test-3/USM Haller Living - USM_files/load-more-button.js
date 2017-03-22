@@ -1,0 +1,1 @@
+define(['./USM','jquery'],function(USM,jQuery){'use strict';(function(){$('.content-wrapper').on('click','.btn-load-link',function(e){var $this=$(this).addClass('loading');$.get($this.attr('href'),function(data){$('div.btn-load').first().replaceWith(data);});e.preventDefault();});})(jQuery);});

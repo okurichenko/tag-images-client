@@ -1,0 +1,26 @@
+{
+  "name": "roshen",
+  "version": "1.0.0",
+  "description": "Proof of concept for image tagging",
+  "main": "webpack.config.js",
+  "scripts": {
+    "live": "live-server . --port=5001 --host=localhost --open=/tests",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oleksii Kurichenko",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "css-loader": "^0.27.3",
+    "jquery": "^3.2.1",
+    "live-server": "^1.2.0",
+    "moment": "^2.18.1",
+    "node-sass": "^4.5.1",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.15.0",
+    "webpack": "^2.3.0"
+  }
+}
