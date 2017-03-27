@@ -10347,10 +10347,8 @@ function recalculate($tag, $img, tagData) {
       top = _$img$offset.top,
       left = _$img$offset.left;
 
-  var _$img$ = $img[0],
-      width = _$img$.width,
-      height = _$img$.height;
-
+  var height = $img.height();
+  var width = $img.width();
   $tag.css('display', 'block');
   $tag.css('top', height * tagData.pos_y / 100 + top - 10 + 'px');
   $tag.css('left', width * tagData.pos_x / 100 + left - 10 + 'px');
@@ -10394,8 +10392,11 @@ var wrTimeout = null;
     if ($i.length) {
       $i.imageTag($i, tagsData[i]);
     } else {
-      (0, _jquery2.default)('div').filter(function () {
-        return (0, _jquery2.default)(undefined).css("background-image").indexOf(i) > -1;
+      (0, _jquery2.default)('div').each(function (n, e) {
+        var $e = (0, _jquery2.default)(e);
+        if ($e.css("background-image").indexOf(i) > -1) {
+          $e.imageTag($e, tagsData[i]);
+        }
       });
     }
   };

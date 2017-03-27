@@ -4,7 +4,8 @@ import $ from 'jquery';
 
 function recalculate($tag, $img, tagData) {
   const { top, left } = $img.offset();
-  const { width, height } = $img[0];
+  const height = $img.height();
+  const width = $img.width();
   $tag.css('display', 'block');
   $tag.css('top', `${height * tagData.pos_y /100 + top - 10}px`);
   $tag.css('left', `${width * tagData.pos_x /100 + left - 10}px`);
@@ -47,8 +48,11 @@ $('document').ready(() => {
     if ($i.length) {
       $i.imageTag($i, tagsData[i]);
     } else {
-      $('div').filter(() => {
-        return $(this).css("background-image").indexOf(i) > -1;
+      $('div').each((n, e) => {
+        const $e = $(e);
+        if ($e.css("background-image").indexOf(i) > -1) {
+          $e.imageTag($e, tagsData[i]);
+        }
       })
     }
   }

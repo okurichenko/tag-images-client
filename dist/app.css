@@ -35,3 +35,9 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+.bg-example {
+  height: 300px;
+  width: 600px;
+  position: relative;
+}
